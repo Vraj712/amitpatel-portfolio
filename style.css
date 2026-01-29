@@ -1,3 +1,10 @@
+/* --- ADD AT THE VERY TOP OF style.css --- */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* CRITICAL: Hides horizontal overflow */
+    position: relative;
+}
 /* --- TITANIUM THEME VARIABLES --- */
 :root {
     --navy: #0f172a;
@@ -375,4 +382,123 @@ footer { padding: 40px 0; background: var(--navy-light); color: #888; font-size:
     .contact-wrapper { flex-direction: column; padding: 30px; }
     .contact-info { padding-bottom: 30px; text-align: center; }
     .c-row { justify-content: center; }
+}
+
+/* --- MOBILE OPTIMIZATION (FINAL PERFECT VERSION) --- */
+@media (max-width: 900px) {
+    
+    /* 1. CLEANER BACKGROUND */
+    #hero-canvas {
+        display: none; /* Removes the distracting dots on mobile */
+    }
+    .hero {
+        background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%); /* Clean, premium gradient */
+        padding: 100px 20px 60px 20px; /* More top padding so nav doesn't overlap */
+        text-align: center;
+        min-height: auto;
+    }
+
+    /* 2. TYPOGRAPHY FIXES */
+    .hero h1 { 
+        font-size: 2.5rem; 
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 10px;
+        margin-bottom: 35px;
+    }
+    
+    /* 3. FIX BUTTONS (The Main Issue) */
+    .hero-btns { 
+        display: flex;
+        flex-direction: column; /* Stack them vertically */
+        gap: 15px; 
+        width: 100%;
+        max-width: 320px; /* limit width so they aren't too wide */
+        margin: 0 auto;   /* Center the stack */
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;      /* Full width for easy tapping */
+        justify-content: center;
+        margin: 0 !important; /* Remove old margins */
+        padding: 18px;    /* Taller touch target */
+        box-sizing: border-box;
+    }
+
+/* 4. FIXED STATS BAR FOR MOBILE */
+    .stats-bar {
+        padding: 40px 0;
+        height: auto; /* Allow it to grow tall */
+    }
+
+    .stats-flex { 
+        display: flex;
+        flex-direction: column !important; /* CRITICAL: Forces items to stack top-to-bottom */
+        gap: 40px; 
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .stat-box {
+        width: 100%;
+        text-align: center;
+        border: none !important; /* Removes borders that might look weird */
+    }
+    
+    .divider { 
+        display: none !important; /* Hides the vertical lines between numbers */
+    }
+    
+    /* Fix text size for mobile */
+    .counter {
+        font-size: 3rem;
+    }
+    
+    .stat-box p {
+        font-size: 1rem;
+        opacity: 0.8;
+    }
+    /* 5. IMAGE & LAYOUT */
+    .hero-flex { 
+        flex-direction: column-reverse; 
+        gap: 50px; 
+    }
+/* --- UPDATE INSIDE @media (max-width: 900px) --- */
+
+    /* Fix the Image Frame width */
+    .glass-frame { 
+        width: 90%;          /* Use percentage instead of fixed px */
+        max-width: 300px; 
+        height: 380px; 
+        margin: 0 auto;      /* Center it */
+        transform: none !important; /* Disable 3D tilt on mobile to prevent overflow */
+    }
+
+    /* Fix the Badge so it doesn't stick out */
+    .floating-badge {
+        width: auto;
+        right: 50%;          /* Move to center */
+        left: auto;
+        transform: translateX(50%) translateZ(30px); /* Center it perfectly */
+        bottom: -20px;
+        white-space: nowrap; /* Keep text on one line */
+    }
+
+    /* 6. TIMELINE & CARDS */
+    .timeline { padding: 0; }
+    .timeline-line { left: 15px; }
+    .job-row { flex-direction: column; margin-bottom: 40px; }
+    .job-date { width: 100%; text-align: left; padding-left: 45px; margin-bottom: 5px; }
+    .job-marker { left: 6px; top: 3px; }
+    .job-card { margin-left: 35px; width: auto; }
+    .grid-3, .grid-2 { grid-template-columns: 1fr; }
+    
+    /* 7. CONTACT FORM */
+    .contact-wrapper { padding: 30px 20px; gap: 40px; }
+    .contact-form-area { padding: 25px; }
 }
