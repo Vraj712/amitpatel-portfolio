@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amitkumar Patel - Resume</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root { --navy: #0f172a; --gold: #ca8a04; --text: #333; --border: #e2e8f0; }
+        
+        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Lato', sans-serif; color: var(--text);
+            width: 100%; max-width: 800px; margin: 0 auto; padding: 40px;
+            background: white;
+        }
+
+        /* HEADER */
+        header { 
+            border-bottom: 3px solid var(--navy); 
+            padding-bottom: 25px; 
+            margin-bottom: 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-start;
+        }
+
+        .header-left { display: flex; gap: 20px; align-items: center; }
+        .profile-pic { 
+            width: 100px; height: 100px; 
+            border-radius: 50%; 
+            border: 3px solid var(--navy); 
+            object-fit: cover; 
+            object-position: top center;
+        }
+
+        h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.2rem; 
+            color: var(--navy); 
+            margin: 0 0 5px 0; 
+            text-transform: uppercase; 
+        }
+        
+        .role { color: var(--gold); font-weight: bold; font-size: 1rem; letter-spacing: 1px; }
+
+        .contact-stack { text-align: right; font-size: 0.85rem; line-height: 1.5; color: #555; }
+        .contact-stack i { color: var(--navy); margin-left: 5px; width: 15px; }
+
+        /* SECTIONS */
+        section { margin-bottom: 25px; }
+        
+        h2 { 
+            font-size: 1.1rem; 
+            color: white; 
+            background: var(--navy);
+            padding: 5px 10px;
+            margin-bottom: 15px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            display: inline-block;
+            border-radius: 4px;
+        }
+
+        p { margin: 0 0 10px 0; font-size: 0.95rem; line-height: 1.5; text-align: justify; }
+
+        /* JOB ITEMS */
+        .job-item { 
+            margin-bottom: 20px; 
+            border-left: 3px solid var(--gold); 
+            padding-left: 15px; 
+        }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
+        .company { color: var(--navy); font-size: 1.05rem; font-weight: bold; }
+        .date { color: #666; font-size: 0.9rem; font-style: italic; }
+        .job-role { color: var(--gold); font-weight: bold; font-size: 0.95rem; margin-bottom: 5px; display: block; }
+
+        ul { margin: 5px 0 0 0; padding-left: 20px; font-size: 0.9rem; }
+        li { margin-bottom: 4px; }
+
+        /* SKILLS GRID */
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 10px; 
+            font-size: 0.85rem; 
+        }
+        .skill-item { 
+            background: #f8fafc; 
+            padding: 8px; 
+            border: 1px solid var(--border); 
+            border-radius: 4px; 
+        }
+
+        /* EDUCATION TABLE STYLE */
+        .edu-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 10px; }
+        .edu-table td { padding: 6px; border-bottom: 1px solid #eee; }
+        .edu-table strong { color: var(--navy); }
+
+        /* DECLARATION */
+        .declaration { 
+            margin-top: 40px; 
+            border-top: 1px solid #ccc; 
+            padding-top: 10px; 
+            font-style: italic; 
+            font-size: 0.85rem; 
+            color: #666; 
+        }
+
+        /* PRINT BUTTON */
+        .no-print { text-align: center; margin-bottom: 30px; }
+        .print-btn { 
+            background: var(--navy); color: white; 
+            padding: 12px 25px; border: none; 
+            border-radius: 5px; cursor: pointer; font-size: 1rem; 
+        }
+        @media print { .no-print { display: none; } body { padding: 0; } }
+
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <button class="print-btn" onclick="window.print()">🖨️ Click Here to Save as PDF</button>
+    </div>
+
+    <header>
+        <div class="header-left">
+            <img src="amit-profile.jpg" alt="Profile" class="profile-pic">
+            <div>
+                <h1>Amitkumar Patel</h1>
+                <div class="role">SENIOR ACCOUNTANT & FINANCE PROFESSIONAL</div>
+            </div>
+        </div>
+        <div class="contact-stack">
+            <div>+91 99980 17296 | 97376 23008 <i class="fas fa-phone"></i></div>
+            <div>amit_bhum@yahoo.co.in <i class="fas fa-envelope"></i></div>
+            <div>Navrang Society, Uttarsanda-387370 <i class="fas fa-home"></i></div>
+            <div>Nadiad, Dist: Kheda (Gujarat) <i class="fas fa-map-marker-alt"></i></div>
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p>
+            Experienced Accountant with <strong>8+ years of exposure</strong> in handling diverse Finance & Accounts functions including 
+            Commercial Operations, Accounts Payable/Receivables, Auditing, Income Tax, Service Tax, Sales Tax, and Payroll Matters.
+            Proven expertise in Working Capital Management, Budgeting, and ERP (Tally) implementation.
+        </p>
+    </section>
+
+    <section>
+        <h2>Core Competencies</h2>
+        <div class="skills-grid">
+            <div class="skill-item">Accounts Management</div>
+            <div class="skill-item">Audit Facilitation</div>
+            <div class="skill-item">Strategic Planning</div>
+            <div class="skill-item">Taxation (GST/VAT/TDS)</div>
+            <div class="skill-item">Budgeting & Costing</div>
+            <div class="skill-item">Cash Flow Mgmt</div>
+            <div class="skill-item">Sales/Stock Accounting</div>
+            <div class="skill-item">Statutory Compliance</div>
+            <div class="skill-item">Fund Management</div>
+            <div class="skill-item">Vendor Management</div>
+            <div class="skill-item">Import/Export Accts</div>
+            <div class="skill-item">Tally ERP</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Work Experience</h2>
+        
+        <div class="job-item">
+            <div class="job-header">
+                <span class="company">Tirupati Foundation Trust, Bakrol-Anand</span>
+                <span class="date">Nov 2010 - Present</span>
+            </div>
+            <span class="job-role">Senior Accountant</span>
+            <ul>
+                <li>Managing overall accounting functions: Vouchers, Tally entries, and Banking functions.</li>
+                <li>Involved in preparation of bank reconciliation statements on a periodical basis.</li>
+                <li>Independently finalizing <strong>Trading Account, Profit & Loss Account, and Balance Sheet.</strong></li>
+                <li>Preparing Funds Flow and Cash Flow statements to monitor inflow & outflow of funds.</li>
+                <li>Managing Service Tax calculations and Stock Reconciliation reports.</li>
+                <li>Handling month-wise Sundry Creditors & Debtors statements and verifying bills/vouchers.</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-header">
+                <span class="company">Diamond Lab | Anand Optics | Sterling Meditech</span>
+                <span class="date">Feb 2006 - Oct 2010</span>
+            </div>
+            <span class="job-role">Accountant (Import/Export Firm)</span>
+            <ul>
+                <li>Maintained ledgers and book-keeping for optical business including Import/Export accounts.</li>
+                <li>Supervised taxation operations: <strong>TDS, Service Tax (ST-3), Sales Tax (DVAT-16, CST Form-1), VAT, Excise, & Income Tax.</strong></li>
+                <li>Ensured timely filing of returns and compliance with statutory enactments.</li>
+                <li>Implemented integrated accounting systems for separate cost & financial accounting.</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-header">
+                <span class="company">National Informatics Centre, Nadiad</span>
+                <span class="date">Oct 2002 - Dec 2003</span>
+            </div>
+            <span class="job-role">Data Entry Operator</span>
+            <ul>
+                <li>Managed data entry operations on <strong>Windows (XP, 98, 2000)</strong> operating systems.</li>
+                <li>Experience working with <strong>Linux and Unix</strong> operating systems.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Academic Credentials</h2>
+        <table class="edu-table">
+            <tr>
+                <td><strong>IFRS (ACCA)</strong></td>
+                <td>I-act Delhi</td>
+                <td>2014</td>
+                <td>56%</td>
+            </tr>
+            <tr>
+                <td><strong>INDA+ Certification</strong></td>
+                <td>National Academy of Modern Account</td>
+                <td>2007</td>
+                <td>"B" Grade</td>
+            </tr>
+            <tr>
+                <td><strong>Bachelor of Commerce</strong></td>
+                <td>Gujarat University, Ahmedabad</td>
+                <td>2000</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <td><strong>Class XII (HSC)</strong></td>
+                <td>GSEB, Gandhinagar</td>
+                <td>1998</td>
+                <td>55%</td>
+            </tr>
+            <tr>
+                <td><strong>Class X (SSC)</strong></td>
+                <td>GSEB, Gandhinagar</td>
+                <td>1995</td>
+                <td>55%</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Personal Details</h2>
+        <p>
+            <strong>Date of Birth:</strong> 30th August, 1980 <br>
+            <strong>Languages Known:</strong> English, Hindi, Gujarati <br>
+            <strong>Technical Skills:</strong> Tally, MS Office, Windows, Internet Applications, Online Banking.
+        </p>
+    </section>
+
+    <div class="declaration">
+        "I do hereby declare that the above information is true to the best of my knowledge."
+        <br><br>
+        <strong>- Amitkumar Jagdishbhai Patel</strong>
+    </div>
+
+</body>
+</html>
